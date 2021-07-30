@@ -2,7 +2,7 @@
 const theme = require("./tailwindConfig/theme");
 const components = require("./tailwindConfig/plugins");
 const variants = require("./tailwindConfig/variants");
-const purge = ["./**/*.tsx"];
+const purge = ["./**/*.tsx", "./node_modules/@fortawesome/**/*.js"];
 
 const env = process.env.NODE_ENV || "development";
 const isDevEnv = env === "development";
