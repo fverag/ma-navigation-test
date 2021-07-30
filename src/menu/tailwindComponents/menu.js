@@ -32,6 +32,32 @@ const menu = {
   ".account-menu": {
     width: "calc(100% + 0.75px) !important",
   },
+  "svg:not(:root).svg-inline--fa": {
+    overflow: "visible !important",
+  },
+  ".svg-inline--fa": {
+    display: "inline-block !important",
+    fontSize: "inherit !important",
+    height: "1em !important",
+    overflow: "visible !important",
+    verticalAlign: "-0.125em !important",
+  },
+  ".svg-inline--fa.fa-w-6": {
+    width: "0.375em !important",
+  },
+
+  ".svg-inline--fa.fa-w-8": {
+    width: "0.5em !important",
+  },
+  ".svg-inline--fa.fa-w-14": {
+    width: "0.875em !important",
+  },
+  ".svg-inline--fa.fa-w-10": {
+    width: "0.625em !important",
+  },
+  ".fa-1x": {
+    fontSize: "1em !important",
+  },
 };
 
 module.exports = menu;
