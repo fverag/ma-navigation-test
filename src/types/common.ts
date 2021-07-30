@@ -16,3 +16,15 @@ export interface GroupSettings {
   businessUnit: string | null;
   section: string | null;
 }
+
+export type Enviroment = "staging" | "production";
+
+export interface DataGetterArgs {
+  country: CountryCode;
+  sectionOrBusinessUnit: string | null;
+  enviroment: Enviroment;
+}
+
+export interface GetDataArgs extends DataGetterArgs {
+  type: NavigationType;
+}

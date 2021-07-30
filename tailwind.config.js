@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const theme = require("./config/theme");
-const components = require("./config/plugins");
-// const variants = require("./plugins/variants");
+const theme = require("./tailwindConfig/theme");
+const components = require("./tailwindConfig/plugins");
 const purge = ["./**/*.tsx"];
 
 const env = process.env.NODE_ENV || "development";

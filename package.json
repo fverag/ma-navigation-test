@@ -1,12 +1,16 @@
 {
-  "name": "@compara-ui/navigation",
+  "name": "ma-navigation-test",
   "version": "0.0.1",
-  "private": true,
+  "description": "",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib",
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "build-dev": "webpack --mode development",
-    "build-prod": "webpack --mode production",
-    "start": "webpack serve --hot --mode development"
+    "app:build-dev": "webpack --mode development",
+    "app:build-prod": "webpack --mode production",
+    "app:start": "webpack serve --hot --mode development",
+    "build": "tsc -p ."
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
