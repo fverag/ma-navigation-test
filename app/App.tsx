@@ -21,7 +21,7 @@ export const App: React.FC = () => {
   return (
     <main>
       {menuData && <Menu data={menuData} />}
-      <p>Content</p>
+      <p>Content test</p>
     </main>
   );
 };

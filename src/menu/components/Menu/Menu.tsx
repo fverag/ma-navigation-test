@@ -15,7 +15,6 @@ export const Menu: React.FC<MenuProps> = ({
   },
 }) => {
   const [isOpen, setOpen] = useState<boolean>(false);
-  const [isUserAccountOpen, setUserAccountOpen] = useState<boolean>(false);
 
   const [hasCategoryOpen, setHasCategoryOpen] = useState<boolean>(false);
   const hasCtas = Boolean(ctas && ctas.length);
@@ -26,7 +25,7 @@ export const Menu: React.FC<MenuProps> = ({
   });
 
   return (
-    <section className="border-b border-grey-300">
+    <section className="test-menu border-b border-grey-300">
       <div className="menu-root bg-white flex flex-wrap md:flex-nowrap justify-between md:max-w-7xl mx-auto md:px-6 lg:px-0 z-30 relative">
         <Logo />
         <Nav className={navClass} setHasCategoryOpen={setHasCategoryOpen} categories={elements}>
@@ -58,7 +57,7 @@ export const Menu: React.FC<MenuProps> = ({
           </button>
         </div>
       </div>
-      <Overlay isOpen={isOpen || isUserAccountOpen} />
+      <Overlay isOpen={isOpen} />
     </section>
   );
 };

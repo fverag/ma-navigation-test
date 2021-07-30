@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const theme = require("./tailwindConfig/theme");
 const components = require("./tailwindConfig/plugins");
+const variants = require("./tailwindConfig/variants");
 const purge = ["./**/*.tsx"];
 
 const env = process.env.NODE_ENV || "development";
@@ -9,7 +10,7 @@ const isDevEnv = env === "development";
 module.exports = {
   purge,
   prefix: "",
-  important: false,
+  important: true,
   separator: ":",
   mode: isDevEnv ? "jit" : undefined,
   theme,
@@ -113,5 +114,5 @@ module.exports = {
     transitionDelay: ["responsive"],
   },
   corePlugins: {},
-  plugins: [components],
+  plugins: [components, ...variants],
 };

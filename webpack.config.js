@@ -2,7 +2,7 @@
 const path = require("path");
 
 const config = {
-  entry: ["react-hot-loader/patch", "./src/index.ts"],
+  entry: ["react-hot-loader/patch", "./app/index.tsx"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -25,7 +25,7 @@ const config = {
       },
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, "src"),
+        include: path.resolve(__dirname, "app"),
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],

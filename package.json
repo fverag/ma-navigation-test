@@ -1,16 +1,19 @@
 {
   "name": "ma-navigation-test",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "app:build-dev": "webpack --mode development",
-    "app:build-prod": "webpack --mode production",
-    "app:start": "webpack serve --hot --mode development",
-    "build": "tsc -p ."
+    "app:build-dev": "TS_NODE_PROJECT=dev.tsconfig.json webpack --mode development",
+    "app:build-prod": "TS_NODE_PROJECT=dev.tsconfig.json webpack --mode production",
+    "app:start": "TS_NODE_PROJECT=dev.tsconfig.json webpack serve --hot --mode development",
+    "build": "NODE_ENV=production npx tailwind -o ./lib/style.css --minify && tsc -p ."
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
@@ -35,13 +38,13 @@
     "react-hot-loader": "^4.13.0",
     "style-loader": "^3.2.1",
     "ts-loader": "^9.2.4",
+    "tsconfig-paths": "^3.10.1",
     "typescript": "^4.3.5",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   },
   "peerDependencies": {
     "clsx": "^1.1.1",
-    "next": "9.4.4",
     "react": "^17.0.1",
     "react-dom": "16.13.1"
   },
